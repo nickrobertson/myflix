@@ -1,11 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
-
 gem 'bootstrap-sass'
 gem 'bootstrap_form'
-gem 'bcrypt-ruby'
 gem 'coffee-rails'
-gem 'rails', '4.1.1'
+gem 'rails'
 gem 'haml-rails'
 gem 'sass-rails'
 gem 'uglifier'
@@ -18,6 +15,7 @@ group :development do
   gem 'thin'
   gem "better_errors"
   gem "binding_of_caller"
+  gem "bcrypt"
 end
 
 group :development, :test do
@@ -25,12 +23,9 @@ group :development, :test do
 end
 
 group :test do
-  gem 'database_cleaner', '1.2.0'
-  end
-
-group :test do
+  gem 'database_cleaner'
   gem 'shoulda-matchers'
-end
+  end
 
 group :production do
   gem 'pg'

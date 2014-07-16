@@ -1,13 +1,34 @@
 %section.sign_in.container
   .row
-    .span10.offset1
-      = form_tag sessions_path, class: 'sign_in' do
+    .col-sm-10.col-sm-offset-1
+      = form_tag sessions_path do
         %header
           %h1 Sign in
         %fieldset
           = label_tag :email, "Email Address"
           = email_field_tag :email
+          %br/
           = label_tag :password
           = password_field_tag :password
-        %fieldset.action
-          %input(type="submit" value="Sign in" class="btn")
+        %fieldset.actions.control-group.col-sm-offset-0
+          .controls
+            %input(type="submit" value="Sign in" class="btn btn-default")
+
+      -#%form.form-horizontal{role: "form"}
+      -#  .form-group
+      -#    %label.col-sm-2.control-label{for: :email} Email Address
+      -#    .col-sm-10
+      -#      %input#inputEmail3.form-control{placeholder: "Email", type: "email"}/
+      -#  .form-group
+      -#    %label.col-sm-2.control-label{for: "inputPassword3"} Password
+      -#    .col-sm-10
+      -#      %input#inputPassword3.form-control{placeholder: "Password", type: "password"}/
+      -#  .form-group
+      -#    .col-sm-offset-2.col-sm-10
+      -#      .checkbox
+      -#        %label
+      -#          %input{type: "checkbox"}/
+      -#          Remember me
+      -#  .form-group
+      -#    .col-sm-offset-2.col-sm-10
+      -#      %button.btn.btn-default{type: "submit"} Sign in

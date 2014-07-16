@@ -3,8 +3,10 @@ class SessionsController < ApplicationController
     user = User.where(email: params[:email]).first
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to home_path, notice: 'you are signed in, enjoy!'
+      flash[:notice] = 'You are signed in, enjoy!'
+      redirect_to home_path
     else
+      session[:user_id] = nil
       flash[:error] = "Invalid email or password"
       redirect_to sign_in_path
     end
@@ -12,7 +14,8 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_path, notice: "You are signed out."
+    flash[:notice] = "You are signed out."
+    redirect_to root_path
   end
 
   def new
