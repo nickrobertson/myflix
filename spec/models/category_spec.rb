@@ -12,6 +12,7 @@ describe Category do
   # end
 
   it {should have_many(:videos)}
+  it {should validate_presence_of(:name)}
 
   # it "has many videos" do
   #   action = Category.create(name: "Action")
