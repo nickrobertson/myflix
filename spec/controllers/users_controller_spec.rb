@@ -11,7 +11,7 @@ describe UsersController do
 describe "POST create" do
   context "with valid input" do
     before do
-      post :create, user: { email: 'qa@qao.com', password: '123456', full_name: 'Billy Bob'}
+      post :create, user: Fabricate.attributes_for(:user)
     end
     it "creates the user" do
       expect(User.count).to eq(1)

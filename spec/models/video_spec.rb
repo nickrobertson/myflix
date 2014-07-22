@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Video do
+  it { should have_many(:reviews).order("created_at DESC")}
   # Test rails framework
     # it "saves itself" do
   #   #setup

@@ -1,4 +1,8 @@
 class SessionsController < ApplicationController
+  def new
+    redirect_to home_path if current_user
+  end
+
   def create
     user = User.where(email: params[:email]).first
     if user && user.authenticate(params[:password])
@@ -18,7 +22,4 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
-  def new
-    redirect_to home_path if current_user
-  end
 end

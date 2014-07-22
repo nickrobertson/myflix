@@ -8,7 +8,7 @@ describe SessionsController do
     end
 
     it "redirects to the home page for authenticated users" do
-      session[:user_id] = User.create(email: 'qa@qao.com', password: '123456', full_name: 'Billy Bob' )
+      session[:user_id] = Fabricate(:user).id
       get :new
       expect(response).to redirect_to home_path
     end
@@ -17,7 +17,7 @@ describe SessionsController do
   describe "POST create" do
     context "with valid credentials" do
       before do
-        billy = session[:user_id] = User.create(email: 'qa@qao.com', password: '123456', full_name: 'Billy Bob' )
+        billy = session[:user_id] = Fabricate(:user).id
         post :create, email: billy.email, password: billy.password
       end
       it "puts the signed user in the session" do
@@ -33,7 +33,7 @@ describe SessionsController do
 
     context "with invalid credentials" do
       before do
-        billy = session[:user_id] = User.create(email: 'qa@qao.com', password: '123456', full_name: 'Billy Bob' )
+        billy = session[:user_id] = Fabricate(:user).id
         post :create, email: billy.email, password: billy.password + 'a65146sdf'
       end
       it "does not put the signed in user in the session" do
@@ -51,7 +51,7 @@ describe SessionsController do
 
   describe "GET destroy" do
     before do
-      session[:user_id] = User.create(email: 'qa@qao.com', password: '123456', full_name: 'Billy Bob' )
+      session[:user_id] = Fabricate(:user).id
       get :destroy
     end
     it "clears the session for the user" do
