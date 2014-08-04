@@ -34,6 +34,24 @@ describe "POST create" do
         expect(assigns(:user)).to be_instance_of(User)
       end
     end
+
+    context "sending emails" do
+
+      after { ActionMailer::Base.deliveries.clear }
+
+      it "sends out emails to the user with valid inputs" do
+        post :create, user: {email: "billy@test.com", password: 'password', full_name: 'Billy Bob'}
+        expect(ActionMailer::Base.deliveries.last.to).to eq(['billy@test.com'])
+      end
+      it "sends out email containing the user's name with valid inputs" do
+        post :create, user: {email: "billy@test.com", password: 'password', full_name: 'Billy Bob'}
+        expect(ActionMailer::Base.deliveries.last.body).to include('Billy Bob')
+      end
+      it "does not send out email with invalid inputs" do
+        post :create, user: {email: "billy@test.com"}
+        expect(ActionMailer::Base.deliveries).to be_empty
+      end
+    end
   end
 
   describe "GET show" do
