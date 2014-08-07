@@ -13,6 +13,9 @@ gem 'bcrypt'
 gem 'fabrication'
 gem 'faker'
 gem 'selenium-webdriver'
+gem 'mail'
+gem 'sidekiq'
+gem 'unicorn'
 
 group :development do
   gem 'sqlite3'
