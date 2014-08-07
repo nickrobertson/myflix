@@ -21,12 +21,10 @@ Myflix::Application.configure do
   config.action_mailer.default_url_options = { host: 'sleepy-badlands-5631.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      :port => 587,
+      :port => 25,
       :address => "smtp.mailgun.org",
-      :user_name => "nbr1983@gmail.com",
-      :password => "021583nr",
-      :domain => 'sandboxf58a098d874b4185b1d3c993b65ce79f.mailgun.org',
-      :authentication => :plain
-  }
-
+      :user_name => "postmaster@sandboxf58a098d874b4185b1d3c993b65ce79f.mailgun.org",
+      :password => "890db284410381e1a0bf39d56c9c110d",
+      :domain => "sandboxf58a098d874b4185b1d3c993b65ce79f.mailgun.org",
+      :authentication => :plain }
 end
