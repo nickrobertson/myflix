@@ -25,6 +25,6 @@ Myflix::Application.configure do
       :address => "smtp.mailgun.org",
       :user_name => "postmaster@sandboxf58a098d874b4185b1d3c993b65ce79f.mailgun.org",
       :password => "890db284410381e1a0bf39d56c9c110d",
-      :domain => "sandboxf58a098d874b4185b1d3c993b65ce79f.mailgun.org",
+      :domain => "sleepy-badlands-5631.herokuapp.com",
       :authentication => :plain }
 end
