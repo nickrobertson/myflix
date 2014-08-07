@@ -1,27 +1,35 @@
+GIT
+  remote: git://github.com/dockyard/capybara-email.git
+  revision: 238d7d7b0374b1fc742b273474c659ae05cd99fa
+  specs:
+    capybara-email (2.4.0)
+      capybara (~> 2.4)
+      mail
+
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (4.1.4)
-      actionpack (= 4.1.4)
-      actionview (= 4.1.4)
+    actionmailer (4.1.1)
+      actionpack (= 4.1.1)
+      actionview (= 4.1.1)
       mail (~> 2.5.4)
-    actionpack (4.1.4)
-      actionview (= 4.1.4)
-      activesupport (= 4.1.4)
+    actionpack (4.1.1)
+      actionview (= 4.1.1)
+      activesupport (= 4.1.1)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
-    actionview (4.1.4)
-      activesupport (= 4.1.4)
+    actionview (4.1.1)
+      activesupport (= 4.1.1)
       builder (~> 3.1)
       erubis (~> 2.7.0)
-    activemodel (4.1.4)
-      activesupport (= 4.1.4)
+    activemodel (4.1.1)
+      activesupport (= 4.1.1)
       builder (~> 3.1)
-    activerecord (4.1.4)
-      activemodel (= 4.1.4)
-      activesupport (= 4.1.4)
+    activerecord (4.1.1)
+      activemodel (= 4.1.1)
+      activesupport (= 4.1.1)
       arel (~> 5.0.0)
-    activesupport (4.1.4)
+    activesupport (4.1.1)
       i18n (~> 0.6, >= 0.6.9)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -35,7 +43,7 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.2.0.0)
+    bootstrap-sass (3.2.0.1)
       sass (~> 3.2)
     bootstrap_form (2.1.1)
     builder (3.2.2)
@@ -45,6 +53,8 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    childprocess (0.5.3)
+      ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -63,6 +73,7 @@ GEM
     fabrication (2.11.3)
     faker (1.4.2)
       i18n (~> 0.5)
+    ffi (1.9.3)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -101,24 +112,24 @@ GEM
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (4.1.4)
-      actionmailer (= 4.1.4)
-      actionpack (= 4.1.4)
-      actionview (= 4.1.4)
-      activemodel (= 4.1.4)
-      activerecord (= 4.1.4)
-      activesupport (= 4.1.4)
+    rails (4.1.1)
+      actionmailer (= 4.1.1)
+      actionpack (= 4.1.1)
+      actionview (= 4.1.1)
+      activemodel (= 4.1.1)
+      activerecord (= 4.1.1)
+      activesupport (= 4.1.1)
       bundler (>= 1.3.0, < 2.0)
-      railties (= 4.1.4)
+      railties (= 4.1.1)
       sprockets-rails (~> 2.0)
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
     rails_serve_static_assets (0.0.2)
     rails_stdout_logging (0.0.3)
-    railties (4.1.4)
-      actionpack (= 4.1.4)
-      activesupport (= 4.1.4)
+    railties (4.1.1)
+      actionpack (= 4.1.1)
+      activesupport (= 4.1.1)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.3.2)
@@ -138,12 +149,18 @@ GEM
       rspec-mocks (~> 3.0.0)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.3)
+    rubyzip (1.1.6)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
+    selenium-webdriver (2.42.0)
+      childprocess (>= 0.5.0)
+      multi_json (~> 1.0)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0.4)
     shoulda-matchers (2.6.2)
       activesupport (>= 3.0.0)
     slop (3.6.0)
@@ -172,6 +189,7 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    websocket (1.0.7)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -185,6 +203,7 @@ DEPENDENCIES
   bootstrap-sass
   bootstrap_form
   capybara
+  capybara-email!
   coffee-rails
   database_cleaner
   fabrication
@@ -196,10 +215,11 @@ DEPENDENCIES
   pg
   pry
   pry-nav
-  rails
+  rails (= 4.1.1)
   rails_12factor
   rspec-rails
   sass-rails
+  selenium-webdriver
   shoulda-matchers
   sqlite3
   thin

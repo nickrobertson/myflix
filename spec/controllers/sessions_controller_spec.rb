@@ -16,33 +16,37 @@ describe SessionsController do
 
   describe "POST create" do
     context "with valid credentials" do
+      let(:alice) { Fabricate(:user) }
       before do
-        billy = session[:user_id] = Fabricate(:user).id
-        post :create, email: billy.email, password: billy.password
+        post :create, email: alice.email, password: alice.password
       end
-      it "puts the signed user in the session" do
-        expect(session[:user_id]).to eq(User.first.id)
+
+      it "puts the signed in user in the session" do
+        expect(session[:user_id]).to eq(alice.id)
       end
+
       it "redirects to the home page" do
         expect(response).to redirect_to home_path
       end
+
       it "sets the notice" do
         expect(flash[:notice]).not_to be_blank
       end
     end
-
     context "with invalid credentials" do
       before do
-        billy = session[:user_id] = Fabricate(:user).id
-        post :create, email: billy.email, password: billy.password + 'a65146sdf'
+        alice = Fabricate(:user)
+        post :create, email: alice.email, password: alice.password + 'fail'
       end
+
       it "does not put the signed in user in the session" do
         expect(session[:user_id]).to be_nil
       end
 
-      it "redirects to the sign in page" do
+      it "redirect to the sign in page" do
         expect(response).to redirect_to sign_in_path
       end
+
       it "sets the error message" do
         expect(flash[:error]).not_to be_blank
       end
