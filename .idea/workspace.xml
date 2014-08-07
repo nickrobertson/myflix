@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="baf3f8b1-c87e-45b4-9bc7-ddb989283de8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/redis.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/initializers/sidekiq.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/unicorn.rb" afterPath="$PROJECT_DIR$/config/unicorn.rb" />
+    <list default="true" id="baf3f8b1-c87e-45b4-9bc7-ddb989283de8" name="Default" comment="week 4 changes">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -179,7 +176,7 @@
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.014799154" vertical-offset="0" max-vertical-offset="946">
-              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+              <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -1234,7 +1231,11 @@
       <created>1407440899873</created>
       <updated>1407440899873</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="week 4 changes">
+      <created>1407441577410</created>
+      <updated>1407441577410</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1735,7 +1736,7 @@
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.014799154" vertical-offset="0" max-vertical-offset="946">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
           <folding />
         </state>
       </provider>
