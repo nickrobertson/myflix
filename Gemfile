@@ -16,6 +16,7 @@ gem 'selenium-webdriver'
 gem 'mail'
 gem 'sidekiq'
 gem 'unicorn'
+gem 'paratrooper'
 
 group :development do
   gem 'sqlite3'

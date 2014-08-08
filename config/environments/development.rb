@@ -21,4 +21,5 @@ Myflix::Application.configure do
   config.assets.debug = true
 
   config.eager_load = false
+  ENV["REDISTOGO_URL"] = 'redis://username:password@my.host:6789'
 end
