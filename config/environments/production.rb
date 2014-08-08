@@ -18,13 +18,13 @@ Myflix::Application.configure do
 
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { host: 'sleepy-badlands-5631.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'myflixnr-prod.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       :port => 25,
       :address => "smtp.mailgun.org",
       :user_name => "postmaster@sandboxf58a098d874b4185b1d3c993b65ce79f.mailgun.org",
       :password => "890db284410381e1a0bf39d56c9c110d",
-      :domain => "sleepy-badlands-5631.herokuapp.com",
+      :domain => "myflixnr-prod.herokuapp.com",
       :authentication => :plain }
 end
