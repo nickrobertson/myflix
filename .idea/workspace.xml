@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baf3f8b1-c87e-45b4-9bc7-ddb989283de8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/deploy.rake" afterPath="$PROJECT_DIR$/lib/tasks/deploy.rake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -177,7 +176,7 @@
         <entry file="file://$PROJECT_DIR$/lib/tasks/deploy.rake">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.20631579" vertical-offset="0" max-vertical-offset="950">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -1210,7 +1209,11 @@
       <created>1407513248772</created>
       <updated>1407513248772</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fix paratrooper gem">
+      <created>1407516723965</created>
+      <updated>1407516723965</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1260,7 +1263,8 @@
     <MESSAGE value="week 3 changes" />
     <MESSAGE value="week 4 changes" />
     <MESSAGE value="week 5 changes ... setting up staging and production servers on Heroku&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="week 5 changes ... setting up staging and production servers on Heroku&#10;" />
+    <MESSAGE value="fix paratrooper gem" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix paratrooper gem" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1721,7 +1725,7 @@
     <entry file="file://$PROJECT_DIR$/lib/tasks/deploy.rake">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20631579" vertical-offset="0" max-vertical-offset="950">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
           <folding />
         </state>
       </provider>
